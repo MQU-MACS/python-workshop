@@ -66,7 +66,7 @@ Hi! I'm Jahin! <sup>(he/him)</sup>
 
 ---
 
-![bg right:40% 40%](./media/python.png)
+![bg right:40% 40%](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
 
 ## What is Python?
 
@@ -80,6 +80,7 @@ Hi! I'm Jahin! <sup>(he/him)</sup>
 
 <!--
 - Sources:
+  - https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg 
   - https://www.python.org/download/releases/ (Python 1.0.1 documentation)
   - https://docs.python.org/3/license.html
   - https://docs.python.org/3/whatsnew/3.0.html
@@ -89,7 +90,7 @@ Hi! I'm Jahin! <sup>(he/him)</sup>
 
 <!-- _class: invert -->
 
-![bg 50%](./media/noone-expects.png)
+![bg 50%](https://i.imgflip.com/3gn5us.jpg)
 
 <!--
 - Attribution:
@@ -173,7 +174,7 @@ Namespaces are one honking great idea -- let's do more of those!
   - `multiprocessing`: do many things at once
   - `sqlite3`: lightweight SQL-like databases
 
-![bg right:40% 75%](./media/xkcd-353.png)
+![bg right:40% 75%](https://imgs.xkcd.com/comics/python.png)
 
 <!-- 
 - Sources:
