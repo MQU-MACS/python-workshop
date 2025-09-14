@@ -1,8 +1,7 @@
 preview:
     marp -w slides.md -o .marp-preview.html
 
+# NOTE: When exporting to PDF, ensure you have Chrome or Chromium installed, so Marp can use it as
+#       the renderer. If Marp detects and uses Firefox, images may not render properly.
 build-pdf:
-    marp --pdf slides.md
-
-build-pptx:
-    marp --pptx slides.md
+    marp --pdf slides.md --allow-local-files
