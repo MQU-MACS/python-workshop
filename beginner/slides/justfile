@@ -1,0 +1,8 @@
+preview:
+    marp -w slides.md -o .marp-preview.html
+
+build-pdf:
+    marp --pdf slides.md
+
+build-pptx:
+    marp --pptx slides.md
