@@ -163,6 +163,31 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ---
 
+
+## Why Python? (continued)
+
+- Scalable for medium and larger projects
+  - Websites: Spotify, Netflix, Reddit, and many other sites
+  - Apps and Games: Ansible, OpenShot, World of Tanks
+
+* Write compiled extensions in C, C++ or Rust for speed-critical sections
+  - Convenience and quick iteration for most of your project…
+  - …with high-performance code for the compute-intensive sections!
+
+<!--
+- Sources:
+  - https://learn.onemonth.com/10-famous-websites-built-using-python/
+    - https://engineering.atspotify.com/2013/3/how-we-use-python-at-spotify
+    - https://netflixtechblog.com/python-at-netflix-86b6028b3b3e
+  - https://en.wikipedia.org/wiki/List_of_Python_software
+    - https://github.com/ansible/ansible
+    - https://github.com/OpenShot/openshot-qt
+    - https://web.archive.org/web/20250307200548/https://hackmag.com/devops/interview-with-wot-developers/
+  - https://docs.python.org/3/extending/extending.html
+-->
+
+---
+
 ## Why Python? (continued)
 
 - Extensive **built-in** standard library:
@@ -919,6 +944,64 @@ This won't be on the test\*, just some geeky information :)
   @dataclass(frozen=True)
   class Vehicle:
       ...
+  ```
+
+---
+
+## Opening files
+
+- Open files with `open`:
+  ```py
+  file = open("filename.txt")
+  print(file.read())
+  file.close()
+  ```
+* By default it opens in read-only mode, use "w" or "a" to change this:
+  ```py
+  file = open("sayings.txt", "w")  # Write mode, replace file contents
+  file.write("Do you ever feel like a stick of mozzerella?")
+
+  file = open("filename.txt", "a")  # Append mode, add stuff after the end of the file
+  ```
+
+---
+
+## Opening files (continued)
+
+- Use `with` to ensure that files are closed automatically when you don't need them anymore:
+  ```py
+  with open("filename.txt") as file:
+      print(file.read())
+  ```
+  * With `with`, the file will always close, even if you do early returns or exceptions are raised.
+
+<!-- 
+
+- with:
+  - Invokes a context manager, which guarantees that cleanup code will run as your code leaves the
+    with block
+  - i.e. even if you break out of a loop, return early from a function, or raise an exception.
+
+-->
+
+---
+
+## Exceptions and try-catch
+
+- Errors and invalid operations raises *exceptions*:
+  ```py
+  "1" - "2"                     # TypeError
+  list_with_three_things[200]   # IndexError
+  open("nonexistent-file.txt")  # OSError
+  ```
+
+* Use `except` to handle exceptions:
+  ```py
+  try:
+      with open("filename.txt") as file:
+        print(file.read())
+  except OSError as error:
+      print(f"Error reading filename.txt: {error}")
   ```
 
 ---
